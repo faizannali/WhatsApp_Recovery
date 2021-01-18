@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_start_color"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_green"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="12dp"
+                android:layout_height="100dp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/century"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/image1"
+                android:text="@string/notification_listener"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/notification_listener_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/msg_log_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"
+                android:layout_toEndOf="@id/image1"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/century"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:textSize="15sp"
+                android:layout_below="@+id/notification_listener_switch"/>
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:theme="@style/PrimaryButtonTheme"
+                android:layout_toStartOf="@id/msg_log_clr_btn"
+                android:layout_below="@id/notification_listener_switch"
+                android:layout_marginTop="5dp"
+                android:text="@string/setting"/>
+            <Button
+                android:id="@+id/msg_log_clr_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:theme="@style/PrimaryButtonTheme"
+                android:text="@string/view"
+                android:layout_margin="5dp"
+                android:layout_below="@id/notification_listener_switch"
+                android:layout_alignParentEnd="true"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/colorAccent"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_green"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="12dp"
+                android:layout_height="100dp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/media_observer"
+                android:fontFamily="@font/century"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/image2"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/med_obs_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/img_dir_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"
+                android:fontFamily="@font/century"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/image2"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/title2"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/img_dir_del_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:theme="@style/PrimaryButtonTheme"
+                android:layout_below="@id/med_obs_switch"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="@string/delete" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

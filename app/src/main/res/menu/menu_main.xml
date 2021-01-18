@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codejunction.whatsappdeletedmessage.MainActivity">
+
+    <item
+        android:id="@+id/action_toggle_theme"
+        android:icon="@drawable/instagram_logo"
+        android:title="instagram"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+</menu>
